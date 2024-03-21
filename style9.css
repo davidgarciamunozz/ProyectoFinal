@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f8fcfe;
+}
+#container{
+    height: 100vh;
+    /* border: solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#izq{
+    padding-top: 1rem;
+    width: 23%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+#content{
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    width: 52%;
+    gap: 2.5rem;
+}
+.blue{
+    color: #02aeef;
+    text-decoration: none;
+}
+.content_items{
+    text-decoration: none; 
+    color: black;
+
+}
+#izq img{
+    width: 200px;
+    height: 50px;
+}
+#imgspace{
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+}
+#der{
+    width: 65%;
+    height: 100%;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+#username{
+    /* border: solid; */
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+#useralign{
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 20px;
+}
+#main_name{
+    color: #252161;
+    font-weight: 600;
+    /* font-weight: bold; */
+}
+
+#logout{
+    font-size: 15px;
+    font-weight: bold;
+    color: #02aeef;
+}
+#userinfo_container{
+    /* border: solid red; */
+    background-color: white;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0;
+    
+}
+#Edit{
+    
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#Edit p{
+    font-weight: bold;
+    color: #02aeef;
+}
+
+#inner{
+    /* border: solid; */
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#profile_img{
+    /* border: solid; */
+    display: flex;
+    align-items: center;
+}
+#profile_img div{
+    /* border: solid; */
+    height: 11rem;
+    width: 11rem;
+    border-radius:50%;
+    background-image: url(recursosimg/profileimage.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.divisores{
+    /* border: solid; */
+    height: 100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.titulo{
+    font-weight: bold;
+}
+.titulo__opacity{
+    opacity: 65%;
+}
+
+/* FOOTER & INFO */
+footer{
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37,33,97);
+ 
+ }
+ #MarcaDeAgua img{
+     height: 60px;
+     /* border: solid; */
+ }
+ footer p{
+     font-size: .7rem;
+     color: white;
+     margin-top: .5rem;
+     /* border: solid; */
+ }
+ #informacion{
+    /* border: solid violet; */
+    width: 100%;
+    display: flex;
+    color: white;
+    background-color: rgb(37,33,97);
+    height: 29rem;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+.cartas{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    list-style: none;
+    font-size: 14px;
+    padding: 2rem;
+    align-items: center;
+    padding-top: 130px;
+} 
+.prueba{
+    list-style: none;
+    margin-top: 0.7rem;
+    opacity: 65%;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* doctores styles */
+.divisores_main{
+    border: solid;
+    height: 33.34%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+
+
+#info_doctores{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+#profileimg{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+
+}
+#reseña{
+    height: 100%;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+.favgroup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .2rem;
+}
+#first{
+    opacity: 65%;
+}
+#second{
+    color: #c0518c;
+}
+button{
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    border-radius: .3rem
+}
+.One{
+    background-image: url(recursosimg/profileimage.jpeg);
+    background-size: cover;
+    background-position: -.5rem;
+}
+.Two{
+    background-image: url(recursosimg/profiletwo.jpg);
+    background-size: cover;
+    background-position: -3rem ;
+    background-repeat: no-repeat;
+}
+.Three{
+    background-image: url(recursosimg/profilethree.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -2rem;
+}
+.titulo{
+    font-size: 20px;
+}
+.descripción{
+    color: #18b6f0;
+}
+.disponibilidad{
+    color: #00a665;
+}

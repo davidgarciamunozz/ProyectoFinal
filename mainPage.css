@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/* barra de navegación */
+#menu{
+    /* border: solid rgb(82, 77, 193) .1rem; */
+    margin-top: 1.5rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.lista{
+    display: flex;
+    /* border: solid; */
+    gap: 3rem;
+    list-style: none;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    width: 200px;
+    height: 50px;
+    margin-left: 3.75rem;
+}
+.lista__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
+
+}
+
+.lista__item--titulo {
+    font-weight: bold;
+    color: black;
+}
+
+
+.lista__item--description {
+    font-size: .7rem;
+}
+
+.lista__boton {
+    height: 3rem;
+    width: 10rem;
+    color:  #8dd5f4;
+    background-color: white;
+    border:  #8dd5f4 solid;
+    border-radius: 0.563rem;
+    margin-right: 3.75rem;
+}
+
+
+.lista__boton:hover{
+    background-color: rgb(192, 229, 241);
+    color: #ffffff;
+    border:#1eb4f5 0.188 solid ;
+    transition: 0.4s;
+}
+
+#blanco{
+   color: white;
+   user-select: none;
+   /* display: none; */
+}
+.deco{
+    border: solid 0.1rem black;
+    display: flex;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+}
+
+
+.child{
+    width: 86vw;
+    height: 10px;
+    border: solid;
+    border: none;
+    border-bottom: 0.106rem solid;
+
+}
+#ProfileCallToAction{
+    /* border: solid;  */
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+a{
+    text-decoration: none;
+}
+#ProfileCallToAction-item1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6bd0f6 ;
+}
+#ProfileCallToAction-item2{
+    font-size: .8rem;
+    display: flex;
+    justify-content: flex-end;
+}
+/* fin barra de navegación */
+
+#hero{
+    /* border: solid; */
+    height: 70vh;
+}
+#hero_title{
+    /* border: solid 1px; */
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+}
+#hero_title_text{
+    /* border: solid; */
+    font-weight: 600;
+    color: #262262;
+}
+
+#hero_searchingBar{
+    /* border: solid 1px; */
+    height: 40%;
+}
+#hero_title_text_variation{
+    font-size: 5rem;
+
+}
+#hero_title_text_variation_two{
+    font-size: 3.5rem;
+}
+
+/* searching bar */
+#banner{
+    height: 18vh;
+    /* background-color: #252161; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#banner_inner{
+    /* border: solid red; */
+    width: 900px;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+}
+#searchingbar{
+    margin-top: 1rem;
+    border: 1px solid black;
+    height: 85%;
+    width: 870px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.baritems{
+    border: solid 1px;
+    height: 100%;
+    width: 10%;
+    padding: 0 .3rem;
+
+
+}
+#mid{
+    width: 25%;
+    border: none;
+    padding: .5rem;
+}
+#larger{
+    width: 35%;
+    border: none;
+    text-overflow: ellipsis;
+}
+
+#larger::placeholder {
+    text-overflow: ellipsis;
+}
+
+#calendar{
+     width: 25%;
+     border: none;
+}
+#buscador{
+    width: 15%;
+    border: none;
+    background-color: #262262;
+    color: white;
+    font-weight: 600;
+
+}
+.divisores{
+    border: solid 1px;
+    height: 100%;
+    width: 0px;
+    border: none;
+    border-right: 1px solid black;
+
+}
+input{
+    color: #262262;
+    font-weight: 600;
+}
+select{
+    color: #262262;
+
+}
+/* fin searching bar */
+/* 
+footer & info */
+
+footer{
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37,33,97);
+ 
+ }
+ #MarcaDeAgua img{
+     height: 60px;
+     /* border: solid; */
+ }
+ footer p{
+     font-size: .7rem;
+     color: white;
+     margin-top: .5rem;
+     /* border: solid; */
+ }
+ #informacion{
+    /* border: solid violet; */
+    width: 100%;
+    display: flex;
+    color: white;
+    background-color: rgb(37,33,97);
+    height: 29rem;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+.cartas{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    list-style: none;
+    font-size: 0.875rem;
+    padding: 2rem;
+    align-items: center;
+    padding-top: 8.125rem;
+} 
+.prueba{
+    list-style: none;
+    margin-top: 0.7rem;
+    opacity: 65%;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
