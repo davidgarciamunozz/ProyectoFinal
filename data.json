@@ -1,0 +1,108 @@
+[
+    {
+        "firstname": "Miguel",
+        "lastname": "Lozano",
+        "genre": "male",
+        "role": "Cardiologo Especialista",
+        "available": true,
+        "image": "recursosimg/profileimage.jpeg"
+    },
+    {
+        "firstname": "Jose",
+        "lastname": "Negrette",
+        "genre": "male",
+        "role": "Cardiologo Especialista",
+        "available": true
+    },
+    {
+        "firstname": "Ana",
+        "lastname": "García",
+        "genre": "female",
+        "role": "Neuróloga Especialista",
+        "available": true
+    },
+    {
+        "firstname": "Javier",
+        "lastname": "Martínez",
+        "genre": "male",
+        "role": "Cirujano Cardiovascular",
+        "available": false
+    },
+    {
+        "firstname": "Elena",
+        "lastname": "Hernández",
+        "genre": "female",
+        "role": "Médica de Atención Primaria",
+        "available": true
+    },
+    {
+        "firstname": "Diego",
+        "lastname": "López",
+        "genre": "male",
+        "role": "Endocrinólogo",
+        "available": true
+    },
+    {
+        "firstname": "Sara",
+        "lastname": "Ruiz",
+        "genre": "female",
+        "role": "Psiquiatra",
+        "available": false
+    },
+    {
+        "firstname": "Pedro",
+        "lastname": "Gómez",
+        "genre": "male",
+        "role": "Oftalmólogo",
+        "available": true
+    },
+    {
+        "firstname": "Lucía",
+        "lastname": "Fernández",
+        "genre": "female",
+        "role": "Dermatóloga",
+        "available": true
+    },
+    {
+        "firstname": "Pablo",
+        "lastname": "Sánchez",
+        "genre": "male",
+        "role": "Pediatra",
+        "available": false
+    },
+    {
+        "firstname": "María",
+        "lastname": "López",
+        "genre": "female",
+        "role": "Ginecóloga",
+        "available": true
+    },
+    {
+        "firstname": "Carlos",
+        "lastname": "Martín",
+        "genre": "male",
+        "role": "Urología",
+        "available": true
+    },
+    {
+        "firstname": "Laura",
+        "lastname": "González",
+        "genre": "female",
+        "role": "Geriatra",
+        "available": false
+    },
+    {
+        "firstname": "José",
+        "lastname": "Díaz",
+        "genre": "male",
+        "role": "Anestesiólogo",
+        "available": true
+    },
+    {
+        "firstname": "Isabel",
+        "lastname": "Martínez",
+        "genre": "female",
+        "role": "Nutricionista",
+        "available": true
+    }
+    ]
