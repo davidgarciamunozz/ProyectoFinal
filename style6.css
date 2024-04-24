@@ -77,7 +77,6 @@
 
 #main{
     /* border: solid; */
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,3 +291,16 @@ a{
 
 }
 /* FIN SEARCHING BAR */
+
+.main_doctor{
+    border: solid 1px;
+    width: 55%;
+    height: 10rem;
+    display: flex;
+}
+.doctor_img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 1rem;
+}
