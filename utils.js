@@ -70,12 +70,18 @@ export class Doctor {
         aside_favorite_text.classList.add("aside_favorite_text");
         aside_favorite_text.textContent = "Añadir a Favoritos";
 
-        doctor_box.appendChild(doctor_agrupation_img_description);
+        const aside_boxOne = document.createElement("div");
+        aside_boxOne.classList.add("aside_boxOne");
+
+        aside_boxOne.appendChild(aside_favorite_icon);
+        aside_boxOne.appendChild(aside_favorite_text);
+        doctor_box_description_aside.appendChild(aside_boxOne);
         doctor_box_description_aside.appendChild(aside_decription);
         aside_decription.appendChild(aside_reviews_text);
         aside_decription.appendChild(aside_reviews_icons);
         doctor_box_description_aside.appendChild(agendar);
         doctor_agrupation_img_description.appendChild(doctor_box_description);
+        doctor_box.appendChild(doctor_agrupation_img_description);
         doctor_box.appendChild(doctor_box_description_aside);
         doctor_agrupation_img_description.appendChild(doctor_img);
         doctor_box_description.appendChild(title);
