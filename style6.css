@@ -294,11 +294,12 @@ a{
 
 
 .main_doctor{
-    border: solid 1px;
+    /* border: solid 1px; */
     width: 55%;
     height: 10rem;
     display: flex;
     justify-content:space-around;
+    border-bottom: 1px solid rgb(206, 194, 194);
 }
 .doctor_img{
     height: 120px;
