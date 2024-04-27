@@ -18,6 +18,10 @@ export class Doctor {
         const doctor_box = document.createElement("div");
          doctor_box.classList.add("main_doctor");
 
+        const doctor_agrupation_img_description = document.createElement("div");
+        doctor_agrupation_img_description.classList.add("main_doctor_agrupation_img_description");
+
+
         const doctor_box_description = document.createElement("div");
         doctor_box_description.classList.add("main_doctor_description");
 
@@ -36,12 +40,47 @@ export class Doctor {
          doctor_info.classList.add("doctor_info");
          doctor_info.textContent = this.roll;
 
+        const availability = document.createElement("p");
+        availability.classList.add("availability");
+        availability.textContent = this.disponibilidad;
 
-        doctor_box.appendChild(doctor_box_description);
-        doctor_box.appendChild(doctor_img);
+        const doctor_box_description_aside = document.createElement("div");
+        doctor_box_description_aside.classList.add("main_doctor_description_aside");
+
+        const agendar = document.createElement("button");
+        agendar.classList.add("agendar");
+        agendar.textContent = "Agendar Consulta";
+
+        
+        const aside_decription = document.createElement("div");
+
+        const aside_reviews_text = document.createElement("p");
+        aside_reviews_text.classList.add("aside_reviews_text");
+        aside_reviews_text.textContent = "Reviews";
+
+        const aside_reviews_icons = document.createElement("p");
+        aside_reviews_icons.classList.add("aside_reviews_icons");
+        aside_reviews_icons.textContent = "⭐⭐⭐⭐⭐";
+
+        const aside_favorite_icon = document.createElement("p");
+        aside_favorite_icon.classList.add("aside_favorite");
+        aside_favorite_icon.textContent = "❤️";
+
+        const aside_favorite_text = document.createElement("p");
+        aside_favorite_text.classList.add("aside_favorite_text");
+        aside_favorite_text.textContent = "Añadir a Favoritos";
+
+        doctor_box.appendChild(doctor_agrupation_img_description);
+        doctor_box_description_aside.appendChild(aside_decription);
+        aside_decription.appendChild(aside_reviews_text);
+        aside_decription.appendChild(aside_reviews_icons);
+        doctor_box_description_aside.appendChild(agendar);
+        doctor_agrupation_img_description.appendChild(doctor_box_description);
+        doctor_box.appendChild(doctor_box_description_aside);
+        doctor_agrupation_img_description.appendChild(doctor_img);
         doctor_box_description.appendChild(title);
         doctor_box_description.appendChild(doctor_info);
-
+        doctor_box_description.appendChild(availability);
 
 
          return doctor_box;
