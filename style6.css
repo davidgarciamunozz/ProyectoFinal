@@ -298,6 +298,7 @@ a{
     width: 55%;
     height: 10rem;
     display: flex;
+    justify-content:space-around;
 }
 .doctor_img{
     height: 120px;
@@ -316,4 +317,11 @@ a{
 }
 .main_doctor{
     min-width: 700px;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.main_doctor_agrupation_img_description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
