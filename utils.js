@@ -27,7 +27,7 @@ export class Doctor {
 
         const doctor_img = document.createElement("img");
          doctor_img.classList.add("doctor_img");
-         doctor_img.src = this.imagen;
+         doctor_img.src = `${this.imagen}`;
          doctor_img.alt = `${this.nombre} ${this.apellido}`;
 
   
