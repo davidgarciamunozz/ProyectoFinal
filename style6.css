@@ -337,10 +337,24 @@ a{
 }
 .aside_decription{
     display: flex;
+    order: 1;
+ 
 }
 .aside_boxOne{
     display: flex;
+    order: 2;
+
+}
+.agendar{
+    order: 3;
 }
 .aside_reviews_icons{
     order: -1;
+}
+.main_doctor_description_aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: .5rem;
 }

@@ -4,7 +4,7 @@
         "lastname": "Lozano",
         "genre": "male",
         "role": "Cardiologo Especialista",
-        "available": true,
+        "available": "Disponible",
         "image": "recursosimg/profileimage.jpeg"
     },
     {
@@ -12,97 +12,97 @@
         "lastname": "Negrette",
         "genre": "male",
         "role": "Cardiologo Especialista",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Ana",
         "lastname": "García",
         "genre": "female",
         "role": "Neuróloga Especialista",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Javier",
         "lastname": "Martínez",
         "genre": "male",
         "role": "Cirujano Cardiovascular",
-        "available": false
+        "available": "No Disponible"
     },
     {
         "firstname": "Elena",
         "lastname": "Hernández",
         "genre": "female",
         "role": "Médica de Atención Primaria",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Diego",
         "lastname": "López",
         "genre": "male",
         "role": "Endocrinólogo",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Sara",
         "lastname": "Ruiz",
         "genre": "female",
         "role": "Psiquiatra",
-        "available": false
+        "available": "No Disponible"
     },
     {
         "firstname": "Pedro",
         "lastname": "Gómez",
         "genre": "male",
         "role": "Oftalmólogo",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Lucía",
         "lastname": "Fernández",
         "genre": "female",
         "role": "Dermatóloga",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Pablo",
         "lastname": "Sánchez",
         "genre": "male",
         "role": "Pediatra",
-        "available": false
+        "available": "No Disponible"
     },
     {
         "firstname": "María",
         "lastname": "López",
         "genre": "female",
         "role": "Ginecóloga",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Carlos",
         "lastname": "Martín",
         "genre": "male",
         "role": "Urología",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Laura",
         "lastname": "González",
         "genre": "female",
         "role": "Geriatra",
-        "available": false
+        "available": "No Disponible"
     },
     {
         "firstname": "José",
         "lastname": "Díaz",
         "genre": "male",
         "role": "Anestesiólogo",
-        "available": true
+        "available": "Disponible"
     },
     {
         "firstname": "Isabel",
         "lastname": "Martínez",
         "genre": "female",
         "role": "Nutricionista",
-        "available": true
+        "available": "Disponible"
     }
     ]
