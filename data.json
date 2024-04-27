@@ -5,104 +5,132 @@
         "genre": "male",
         "role": "Cardiologo Especialista",
         "available": "Disponible",
-        "image": "recursosimg/profileimage.jpeg"
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%231.jpeg?raw=true"
     },
     {
         "firstname": "Jose",
         "lastname": "Negrette",
         "genre": "male",
         "role": "Cardiologo Especialista",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2313.jpeg?raw=true  "
+
     },
     {
         "firstname": "Ana",
         "lastname": "García",
         "genre": "female",
         "role": "Neuróloga Especialista",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%232.jpeg?raw=true  "
+
     },
     {
         "firstname": "Javier",
         "lastname": "Martínez",
         "genre": "male",
         "role": "Cirujano Cardiovascular",
-        "available": "No Disponible"
+        "available": "No Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2314.jpeg?raw=true"
+
     },
     {
         "firstname": "Elena",
         "lastname": "Hernández",
         "genre": "female",
         "role": "Médica de Atención Primaria",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2311.jpeg?raw=true"
+
     },
     {
         "firstname": "Diego",
         "lastname": "López",
         "genre": "male",
         "role": "Endocrinólogo",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2315.jpeg?raw=true"
+
     },
     {
         "firstname": "Sara",
         "lastname": "Ruiz",
         "genre": "female",
         "role": "Psiquiatra",
-        "available": "No Disponible"
+        "available": "No Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%232.jpeg?raw=true"
+
     },
     {
         "firstname": "Pedro",
         "lastname": "Gómez",
         "genre": "male",
         "role": "Oftalmólogo",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%235.jpeg?raw=true"
+
     },
     {
         "firstname": "Lucía",
         "lastname": "Fernández",
         "genre": "female",
         "role": "Dermatóloga",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%233.jpeg?raw=true"
+
     },
     {
         "firstname": "Pablo",
         "lastname": "Sánchez",
         "genre": "male",
         "role": "Pediatra",
-        "available": "No Disponible"
+        "available": "No Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2316.jpeg?raw=true"
+
     },
     {
         "firstname": "María",
         "lastname": "López",
         "genre": "female",
         "role": "Ginecóloga",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%234.jpeg?raw=true"
+
     },
     {
         "firstname": "Carlos",
         "lastname": "Martín",
         "genre": "male",
         "role": "Urología",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2317.jpeg?raw=true"
+
     },
     {
         "firstname": "Laura",
         "lastname": "González",
         "genre": "female",
         "role": "Geriatra",
-        "available": "No Disponible"
+        "available": "No Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%236.jpeg?raw=true"
+
     },
     {
         "firstname": "José",
         "lastname": "Díaz",
         "genre": "male",
         "role": "Anestesiólogo",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%2318.jpeg?raw=true"
+
     },
     {
         "firstname": "Isabel",
         "lastname": "Martínez",
         "genre": "female",
         "role": "Nutricionista",
-        "available": "Disponible"
+        "available": "Disponible",
+        "image": "https://github.com/davidgarciamunozz/ProyectoFinal/blob/main/recursosimg/profile_doctors_%237.jpeg?raw=true"
+
     }
     ]

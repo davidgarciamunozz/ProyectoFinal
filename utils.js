@@ -1,5 +1,5 @@
 export const obtenerDoctores = async () => {
-    const response = await fetch('https://raw.githubusercontent.com/davidgarciamunozz/ProyectoFinal/main/data.json');
+    const response = await fetch('data.json');
     const data = await response.json();
     return data;
 };
@@ -27,7 +27,7 @@ export class Doctor {
 
         const doctor_img = document.createElement("img");
          doctor_img.classList.add("doctor_img");
-         doctor_img.src = this.imagen;
+         doctor_img.src = `${this.imagen}`;
          doctor_img.alt = `${this.nombre} ${this.apellido}`;
 
   
