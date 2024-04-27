@@ -30,7 +30,7 @@ export class Doctor {
          doctor_img.src = this.imagen;
          doctor_img.alt = `${this.nombre} ${this.apellido}`;
 
-
+  
          const title = document.createElement("h2");
          title.classList.add("doctor_title");
          title.textContent = `${this.nombre} ${this.apellido}`;
