@@ -325,3 +325,13 @@ a{
     justify-content: center;
     align-items: center;
 }
+.doctor_title{
+    font-size: 1.5rem;
+    color: black;
+}
+.doctor_info{
+    color: rgb(0,174,239);
+}
+.availability{
+    color: rgb(0,166,101);
+}
