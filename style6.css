@@ -335,3 +335,12 @@ a{
 .availability{
     color: rgb(0,166,101);
 }
+.aside_decription{
+    display: flex;
+}
+.aside_boxOne{
+    display: flex;
+}
+.aside_reviews_icons{
+    order: -1;
+}

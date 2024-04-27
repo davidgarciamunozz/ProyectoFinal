@@ -53,6 +53,7 @@ export class Doctor {
 
         
         const aside_decription = document.createElement("div");
+        aside_decription.classList.add("aside_decription");
 
         const aside_reviews_text = document.createElement("p");
         aside_reviews_text.classList.add("aside_reviews_text");
