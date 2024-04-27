@@ -338,6 +338,8 @@ a{
 .aside_decription{
     display: flex;
     order: 1;
+    gap: .3rem;
+    align-items: center;
  
 }
 .aside_boxOne{
