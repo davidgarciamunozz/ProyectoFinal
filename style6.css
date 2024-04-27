@@ -292,6 +292,7 @@ a{
 }
 /* FIN SEARCHING BAR */
 
+
 .main_doctor{
     border: solid 1px;
     width: 55%;
@@ -303,4 +304,16 @@ a{
     width: 120px;
     border-radius: 50%;
     margin: 1rem;
+}
+.doctor_img{
+    order: -1;
+}
+.main_doctor_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+.main_doctor{
+    min-width: 700px;
 }
