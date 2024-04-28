@@ -41,7 +41,11 @@ export class Doctor {
          doctor_info.textContent = this.roll;
 
         const availability = document.createElement("p");
-        availability.classList.add("availability");
+        if(this.disponibilidad === "Disponible"){
+            availability.classList.add("availability");
+        }else{
+            availability.classList.add("availability_no");
+        }
         availability.textContent = this.disponibilidad;
 
         
@@ -90,15 +94,15 @@ export class Doctor {
         doctor_box_description.appendChild(title);
         doctor_box_description.appendChild(doctor_info);
         doctor_box_description.appendChild(availability);
-       
+
+        
 
 
          return doctor_box;
-         
 
-    };
+    }
+   
 
-  
 
 
 

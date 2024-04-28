@@ -138,20 +138,35 @@ body {
 }
 
 .lista__boton {
-    height: 3rem;
-    width: 10rem;
-    color:  #8dd5f4;
+    height: 2.8rem;
+    width: 9rem;
+    color:  #1eb4f5;
     background-color: white;
-    border:  #8dd5f4 solid;
-    border-radius: 0.5rem;
-    margin-right: 3.75rem;
+    border:  #1eb4f5 2px solid;
+    font-size: 1rem;
+    border-radius: 9px;
+    margin-right: 60px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 10px 10px 0;
+    cursor: pointer;
 }
 
-.lista__boton:hover{
-    background-color: rgb(192, 229, 241);
+
+.lista__boton:hover,
+.lista__boton:focus {
+    background-color: #1eb4f5;
     color: #ffffff;
-    border:#1eb4f5 0.1rem solid ;
+    border:#1eb4f5 2px solid ;
     transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.lista__boton:active{
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+}
+.lista__boton:hover{
+    transform: translateY(-2px);
+
 }
 
 #blanco{
@@ -199,7 +214,7 @@ body {
 #buscador{
     width: 15%;
     border: none;
-    background-color: #7acef3;
+    background-color: #1eb4f5;
     color: white;
     font-weight: 600;
 
