@@ -44,6 +44,8 @@ export class Doctor {
         availability.classList.add("availability");
         availability.textContent = this.disponibilidad;
 
+        
+
         const doctor_box_description_aside = document.createElement("div");
         doctor_box_description_aside.classList.add("main_doctor_description_aside");
 
@@ -88,15 +90,18 @@ export class Doctor {
         doctor_box_description.appendChild(title);
         doctor_box_description.appendChild(doctor_info);
         doctor_box_description.appendChild(availability);
+       
 
 
          return doctor_box;
+         
 
-    }
-   
+    };
+
+  
 
 
 
-}
+};
 
 

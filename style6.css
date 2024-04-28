@@ -172,9 +172,9 @@ button{
 .descripción{
     color: #18b6f0;
 }
-.disponibilidad{
+/* .disponibilidad{
     color: #00a665;
-}
+} */
 
 /* fin contenido pagina */
 
@@ -346,9 +346,9 @@ a{
 .doctor_info{
     color: rgb(0,174,239);
 }
-.availability{
+/* .availability{
     color: rgb(0,166,101);
-}
+} */
 .aside_decription{
     display: flex;
     order: 1;
