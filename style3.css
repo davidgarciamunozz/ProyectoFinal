@@ -25,11 +25,28 @@ input {
 }
 
 .boton {
-    background-color: rgb(92, 194, 235);
+    background-color: #1eb4f5;
     height: 45px;
     border: none;
     color: white;
     font-size: 0.938rem;
+}
+
+.boton:hover,
+.boton:focus {
+    background-color: #1eb4f5;
+    color: #ffffff;
+    border:#1eb4f5 2px solid ;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.boton:active{
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+}
+.boton:hover{
+    transform: translateY(-2px);
 
 }
 
@@ -42,7 +59,6 @@ input {
 button {
     background-color: white;
     color: rgb(61, 78, 180);
-    font-weight: bold;
     border-radius: 5px;
     border: 0.063rem solid rgb(92, 194, 235);
     height: 25px;
@@ -110,21 +126,37 @@ button {
 }
 
 .lista__boton {
-    height: 3rem;
-    width: 10rem;
-    color:  #8dd5f4;
+    height: 2.8rem;
+    width: 9rem;
+    color:  #1eb4f5;
     background-color: white;
-    border:  #8dd5f4 solid;
-    border-radius: 0.563rem;
-    margin-right: 3.75rem;
+    border:  #1eb4f5 2px solid;
+    font-size: 1rem;
+    border-radius: 9px;
+    margin-right: 60px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 10px 10px 0;
+    cursor: pointer;
 }
 
-.lista__boton:hover{
-    background-color: rgb(192, 229, 241);
+
+.lista__boton:hover,
+.lista__boton:focus {
+    background-color: #1eb4f5;
     color: #ffffff;
-    border:#1eb4f5 0.188rem solid ;
+    border:#1eb4f5 2px solid ;
     transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
+
+.lista__boton:active{
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+}
+.lista__boton:hover{
+    transform: translateY(-2px);
+
+}
+
 
 #blanco{
    color: white;
@@ -181,7 +213,6 @@ input {
 button {
     background-color: white;
     color: rgb(61, 78, 180);
-    font-weight: bold;
     border-radius: 0.313rem;
     border: 1px solid rgb(92, 194, 235);
     height: 25px;
