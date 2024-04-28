@@ -350,6 +350,10 @@ a{
 .availability{
     color: rgb(0,166,101);
 }
+.availability_no{
+    color: rgb(211, 12, 12);
+
+}
 .aside_decription{
     display: flex;
     order: 1;
