@@ -47,11 +47,12 @@
 }
 
 .lista__boton {
-    height: 3rem;
-    width: 10rem;
+    height: 2.8rem;
+    width: 9rem;
     color:  #1eb4f5;
     background-color: white;
     border:  #1eb4f5 2px solid;
+    font-size: 1rem;
     border-radius: 9px;
     margin-right: 60px;
     box-shadow: rgba(0, 0, 0, 0.02) 0 10px 10px 0;
@@ -290,7 +291,7 @@ a{
 #buscador{
     width: 15%;
     border: none;
-    background-color: #7acef3;
+    background-color: #1eb4f5;
     color: white;
     font-weight: 600;
 
