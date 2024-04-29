@@ -1,5 +1,6 @@
 import { obtenerDoctores, Doctor } from "./utils.js";
 
+
 const render = async () => {
     
 const doctores = await obtenerDoctores();

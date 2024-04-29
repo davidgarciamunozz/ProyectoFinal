@@ -1,8 +1,11 @@
+import icons from './icons.json' assert {type: 'json'};
+
 export const obtenerDoctores = async () => {
     const response = await fetch('data.json');
     const data = await response.json();
     return data;
 };
+
 
 export class Doctor {
     constructor(nombre, apellido, genero, roll, disponibilidad, imagen) {
@@ -13,6 +16,9 @@ export class Doctor {
         this.disponibilidad = disponibilidad;
         this.imagen = imagen;
     }
+
+
+    
 
     render = () => {
         const doctor_box = document.createElement("div");
@@ -67,11 +73,47 @@ export class Doctor {
 
         const aside_reviews_icons = document.createElement("p");
         aside_reviews_icons.classList.add("aside_reviews_icons");
-        aside_reviews_icons.textContent = "⭐⭐⭐⭐⭐";
 
-        const aside_favorite_icon = document.createElement("p");
+        const review_agroupation = document.createElement("div");
+        review_agroupation.classList.add("review_agroupation");
+        aside_decription.appendChild(review_agroupation);
+
+
+        const svg_img = document.createElement("img");
+        svg_img.src = icons.reviewStar;
+        svg_img.classList.add("reviewStar");
+        review_agroupation.appendChild(svg_img);
+
+
+        const svg_img1 = document.createElement("img");
+        svg_img1.src = icons.reviewStar;
+        svg_img1.classList.add("reviewStar");
+        review_agroupation.appendChild(svg_img1);
+
+        const svg_img2 = document.createElement("img");
+        svg_img2.src = icons.reviewStar;
+        svg_img2.classList.add("reviewStar");
+        review_agroupation.appendChild(svg_img2);
+
+        const svg_img3 = document.createElement("img");
+        svg_img3.src = icons.reviewStar;
+        svg_img3.classList.add("reviewStar");
+        review_agroupation.appendChild(svg_img3);
+
+        const svg_img4 = document.createElement("img");
+        svg_img4.src = icons.reviewStar;
+        svg_img4.classList.add("reviewStar");
+        review_agroupation.appendChild(svg_img4);
+
+
+        const aside_favorite_icon = document.createElement("div");
         aside_favorite_icon.classList.add("aside_favorite");
-        aside_favorite_icon.textContent = "❤️";
+        
+        const svg_imgFavorite = document.createElement("img");
+        svg_imgFavorite.src = icons.favIcon;
+
+        svg_imgFavorite.classList.add("favorite");
+        aside_favorite_icon.appendChild(svg_imgFavorite);
 
         const aside_favorite_text = document.createElement("p");
         aside_favorite_text.classList.add("aside_favorite_text");
@@ -79,6 +121,8 @@ export class Doctor {
 
         const aside_boxOne = document.createElement("div");
         aside_boxOne.classList.add("aside_boxOne");
+        
+
 
         aside_boxOne.appendChild(aside_favorite_icon);
         aside_boxOne.appendChild(aside_favorite_text);
