@@ -366,6 +366,7 @@ a{
     order: 2;
     justify-content: center;
     align-items: center;
+    gap: .1rem;
 }
 .agendar{
     order: 3;
@@ -393,10 +394,26 @@ a{
 .aside_reviews_icons{
     order: -1;
 }
+
+.aside_reviews_text{
+    opacity: 60%;
+}
+
+.aside_favorite_text{
+    opacity: 60%;
+ 
+}
+
 .main_doctor_description_aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: .5rem;
+}
+.reviewStar{
+    height: 20px;
+}
+.favorite{
+    height: 20px;
 }
