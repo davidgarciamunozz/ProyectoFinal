@@ -16,7 +16,7 @@ form {
 }
 
 input {
-    height: 52px;
+    height: 40px;
     width: 370px;
     border-radius: 0.313rem;
     padding-left: 0.625rem;
@@ -185,7 +185,7 @@ a{
 
 }
 input {
-    height: 55px;
+    height: 50px;
     width: 370px;
     border-radius: 0.313rem;
     padding-left: 0.625rem;
