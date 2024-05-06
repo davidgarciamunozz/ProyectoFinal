@@ -163,7 +163,7 @@ export class Doctor {
 
          return doctor_box;
 
-    } 
+    }
    
 
 
