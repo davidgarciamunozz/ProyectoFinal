@@ -1,20 +1,33 @@
 import icons from './icons.json' assert {type: 'json'};
 
 export const obtenerDoctores = async () => {
-    const response = await fetch('data.json');
+    const response = await fetch('./data.json');
     const data = await response.json();
     return data;
 };
 
+export const obtenerDoctorPorId = async (id) => {
+    const doctores = await obtenerDoctores();
+
+    for (const doctor of doctores) {
+        if (doctor.id === id) {
+            return doctor;
+        }
+    }
+    throw new Error('Doctor no encontrado');
+
+}
+
 
 export class Doctor {
-    constructor(nombre, apellido, genero, roll, disponibilidad, imagen) {
+    constructor(nombre, apellido, genero, roll, disponibilidad, imagen, id,) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.genero = genero;
         this.roll = roll;
         this.disponibilidad = disponibilidad;
         this.imagen = imagen;
+        this.id = id;
     }
 
 
@@ -134,10 +147,16 @@ export class Doctor {
         doctor_agrupation_img_description.appendChild(doctor_box_description);
         doctor_box.appendChild(doctor_agrupation_img_description);
         doctor_box.appendChild(doctor_box_description_aside);
+        agendar.addEventListener("click", () => {
+            window.location.href = `DOM8.html?id=${this.id}`;
+        });
         doctor_agrupation_img_description.appendChild(doctor_img);
         doctor_box_description.appendChild(title);
         doctor_box_description.appendChild(doctor_info);
         doctor_box_description.appendChild(availability);
+
+
+
 
         
 

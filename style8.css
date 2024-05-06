@@ -194,3 +194,14 @@ footer{
 a{
     text-decoration: none;
 }
+
+.imgspace{
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+#profile_img{
+    width: 200px;
+    border-radius: 50%;
+}
