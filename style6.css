@@ -417,3 +417,13 @@ a{
 .favorite{
     height: 20px;
 }
+.filtro{
+    display: none;
+}
+
+#main{
+    min-height: 3rem;
+}
+.mensaje{
+    opacity: 60%;
+}

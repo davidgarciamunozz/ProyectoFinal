@@ -1,10 +1,8 @@
 import { obtenerDoctores, Doctor } from "./utils.js";
 
 
-const render = async (textoBusqueda) => {
+const render = async () => {
 
-// const textoLimpio = textoBusqueda.toLowerCase();
-// console.log(textoLimpio);    
 const doctores = await obtenerDoctores();
 
 const doctor_box = document.getElementById("main");
@@ -15,22 +13,56 @@ for (const doctor of doctores) {
     doctor_box.appendChild(doctorRender);
  };
 
- if(textoLimpio === "" || doctor.firstame.toLowerCase().includes(textoLimpio)){
-    contenedor.appendChild(agenteRender);
-    agente.addEventListeners();
+ const searchInput = document.getElementById("larger");
+
+ searchInput.addEventListener("input", function(){
+
+    const searchText = searchInput.value.toLowerCase();
+
+    const doctorList = document.getElementsByClassName("main_doctor");
+
+    let doctor_encontrado = false;
+
+    for (let i = 0; i < doctorList.length; i++) {
+        const doctor = doctorList[i];
+        const searchData = doctor.querySelector(".doctor_title").textContent.toLowerCase();
+
+
+        if(searchData.includes(searchText)){
+            doctor.style.display = "flex";
+            doctor_encontrado = true;
+        } else {
+            doctor.style.display = "none";
+        }
+
+
+
+    }
+
+    let mensaje = document.querySelector(".mensaje");
+    if (!doctor_encontrado) {
+      if (!mensaje) {
+        mensaje = document.createElement("p");
+        mensaje.textContent = "Doctor no encontrado";
+        mensaje.classList.add("mensaje");
+
+        doctor_box.appendChild(mensaje);
+      }
+      console.log("No se encontró ningún doctor");
+    } else {
+      if (mensaje) {
+        mensaje.remove();
+      }
+    }
+
+    
+
+
+});
+
 }
 
-//  const barraBusqueda = document.getElementById("larger");
-//  barraBusqueda.addEventListener("input", async (event)=>{
-//     const textBusqueda = event.target.value;
-//     await render(textBusqueda);
-//  });
 
- 
-
-
-
-};
 
 
 document.addEventListener('DOMContentLoaded', render);
