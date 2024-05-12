@@ -1,0 +1,63 @@
+const frmRegister = document.getElementById('frm-register');
+const userName = document.getElementById('userName');
+const userLastName = document.getElementById('userLastName');
+const userEmail = document.getElementById('email');
+const userPassword = document.getElementById('password');
+const confirmPassword = document.getElementById('confirmPassword');
+
+const userRegistered = [];
+let id = 0;
+
+frmRegister.addEventListener("submit", registerUser);
+
+
+// Registrar Usuario
+
+function registerUser(event){
+    // Prevenir eventos precargados
+    event.preventDefault();
+    // Agregar un id
+    id++;
+    // Crear un objeto con los datos del usuario
+    const newUser = {
+        id: id,
+        name: userName.value,
+        lastName: userLastName.value,
+        email: userEmail.value,
+        password: userPassword.value,
+        confirmPassword: confirmPassword.value
+    };
+    // Validar que los campos no esten vacios
+    if (
+        userName.value === '' || 
+        userLastName.value === '' || 
+        userEmail.value === '' || 
+        userPassword.value === '' || 
+        confirmPassword.value === ''
+    ){
+        console.log('Por favor, llene todos los campos');
+        // alert('Por favor, llene todos los campos');
+    }
+    // Validar que las contraseñas sean iguales
+    else if (userPassword.value !== confirmPassword.value){
+        alert('Las contraseñas no coinciden');
+    }
+    // Validar que el usuario no este registrado
+    else if (userRegistered.find(user => user.email === userEmail.value)){
+        alert('El usuario ya esta registrado');
+    }
+    // Registrar usuario
+    else {
+        userRegistered.push(newUser);
+        localStorage.setItem('user', JSON.stringify(userRegistered));
+        alert('Usuario registrado correctamente');
+   
+    // Limpiar campos
+        userName.value = '';
+        userLastName.value = '';
+        userEmail.value = '';
+        userPassword.value = '';
+        confirmPassword.value = '';
+    }
+}
+
