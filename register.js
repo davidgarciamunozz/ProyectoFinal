@@ -29,7 +29,8 @@ function registerUser(event){
         lastName: userLastName.value,
         email: userEmail.value,
         password: userPassword.value,
-        confirmPassword: confirmPassword.value
+        confirmPassword: confirmPassword.value,
+        favoritos: [],
     };
     // Validar que los campos no esten vacios
     if (
