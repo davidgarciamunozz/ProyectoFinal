@@ -1,20 +1,34 @@
-// import { userRegistered } from 'register.js';
+import { obtenerUsuarios } from './utils.js';
 
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const frmLogin = document.getElementById('frmLogin');
-const usuariosKey = 'usuarios';
-const usuarioActivoKey = 'usuarioActivo';
-const usuarioActivo = localStorage.getItem(usuarioActivoKey);
+const usuariosKey = 'user';
+const usuarioActivoKey = 'user-active';
+const usuarios = obtenerUsuarios();
+
+
+
+
 
 frmLogin.addEventListener("submit", loginUser);
 
 function loginUser(event){
     // Prevenir eventos precargados
     event.preventDefault();
+    
     // Obtener los datos del usuario
     const getLocal = localStorage.getItem('user');
     const validateUser = JSON.parse(getLocal);
+
+
+    //validate Local Storage is not empty
+
+    if (!validateUser){
+        alert('No hay usuarios registrados');
+        return;
+    }
+    
     // Validar que los campos no esten vacios
     if (email.value === '' || password.value === ''){
         alert('Por favor, llene todos los campos');
@@ -27,34 +41,18 @@ function loginUser(event){
     else if (
         validateUser.find(user => user.email === email.value).password !== password.value){
         alert('Contraseña incorrecta');
-        } 
-    
-    else if (validateUser.find(user => user.email === email.value).password === password.value)  {
-        return;
-    }    
+        }  
 
     else {
         alert('Bienvenido');
-        window.location.href = 'DOM5.html';
+        window.location.href = 'mainPage.html'; 
+        const user = validateUser.find(user => user.email === email.value && user.password === password.value);
+        localStorage.setItem(usuarioActivoKey, user.id);
     }
+
+    
 };
 
-    const obtenerUsuarioActivo = () => {
-    const usuarioActivo = localStorage.getItem(usuarioActivoKey);
-
-    if (!usuarioActivo){
-        return null;
-    }
-
-    const usuarios = obtenerUsuarios();
-    for (const usuario of usuarios){
-        if (usuario.id === usuarioActivo){
-            return usuario;
-        }
-    }
-    return null;
-};
-
-     const logout = () => {
+    const logout = () => {
     localStorage.removeItem(usuarioActivoKey);
-}
+};

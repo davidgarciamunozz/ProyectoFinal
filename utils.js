@@ -171,4 +171,27 @@ export class Doctor {
 
 };
 
+export const obtenerUsuarios = () => {
+    const usuarios = localStorage.getItem('user');
+
+    if (!usuarios){
+        return [];
+    }
+
+    return JSON.parse(usuarios);
+};
+    export const obtenerUsuarioActivo = () => {
+    const usuarioActivo = localStorage.getItem('user-active');
+    const usuarios = obtenerUsuarios();
+    console.log(usuarioActivo); 
+    console.log(usuarios); 
+
+    for (const usuario of usuarios){
+        if (usuario.id.toString() === usuarioActivo){
+            console.log(usuario);
+            return usuario;
+        }
+    }
+    return null;
+};
 

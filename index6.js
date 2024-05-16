@@ -1,7 +1,15 @@
-import { obtenerDoctores, Doctor } from "./utils.js";
+import { obtenerDoctores, Doctor, obtenerUsuarioActivo } from "./utils.js";
 
 
 const render = async () => {
+
+const usuarioActivo = obtenerUsuarioActivo(); 
+console.log(usuarioActivo);
+if (!usuarioActivo) {
+    window.location.href = "DOM4.html";
+    return;
+} 
+
 
 const doctores = await obtenerDoctores();
 
