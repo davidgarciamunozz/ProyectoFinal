@@ -1,6 +1,11 @@
+// import { userRegistered } from 'register.js';
+
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const frmLogin = document.getElementById('frmLogin');
+const usuariosKey = 'usuarios';
+const usuarioActivoKey = 'usuarioActivo';
+const usuarioActivo = localStorage.getItem(usuarioActivoKey);
 
 frmLogin.addEventListener("submit", loginUser);
 
@@ -23,8 +28,33 @@ function loginUser(event){
         validateUser.find(user => user.email === email.value).password !== password.value){
         alert('Contraseña incorrecta');
         } 
+    
+    else if (validateUser.find(user => user.email === email.value).password === password.value)  {
+        return;
+    }    
+
     else {
         alert('Bienvenido');
         window.location.href = 'DOM5.html';
-    }     
+    }
+};
+
+    const obtenerUsuarioActivo = () => {
+    const usuarioActivo = localStorage.getItem(usuarioActivoKey);
+
+    if (!usuarioActivo){
+        return null;
+    }
+
+    const usuarios = obtenerUsuarios();
+    for (const usuario of usuarios){
+        if (usuario.id === usuarioActivo){
+            return usuario;
+        }
+    }
+    return null;
+};
+
+     const logout = () => {
+    localStorage.removeItem(usuarioActivoKey);
 }

@@ -5,8 +5,12 @@ const userEmail = document.getElementById('email');
 const userPassword = document.getElementById('password');
 const confirmPassword = document.getElementById('confirmPassword');
 
-const userRegistered = [];
+// const userRegistered = [];
 let id = 0;
+
+export const userRegistered = JSON.parse(localStorage.getItem('user')) || [];
+
+
 
 frmRegister.addEventListener("submit", registerUser);
 
@@ -17,10 +21,10 @@ function registerUser(event){
     // Prevenir eventos precargados
     event.preventDefault();
     // Agregar un id
-    id++;
+    // id++;
     // Crear un objeto con los datos del usuario
     const newUser = {
-        id: id,
+        id: new Date().getTime(),
         name: userName.value,
         lastName: userLastName.value,
         email: userEmail.value,
@@ -60,4 +64,3 @@ function registerUser(event){
         confirmPassword.value = '';
     }
 }
-
