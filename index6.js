@@ -3,15 +3,32 @@ import { obtenerDoctores, Doctor, obtenerUsuarioActivo } from "./utils.js";
 
 const render = async () => {
 
-const usuarioActivo = obtenerUsuarioActivo(); 
-console.log(usuarioActivo);
-if (!usuarioActivo) {
-    window.location.href = "DOM4.html";
-    return;
-} 
+  const logoutButton = document.querySelector(".lista__boton");
+
+
+  const usuarioActivo = obtenerUsuarioActivo(); 
+  console.log(usuarioActivo);
+  if (!usuarioActivo) {
+      window.location.href = "DOM4.html";
+      return;
+  } 
+
+if (usuarioActivo) {
+    logoutButton.innerText = "Visitar Perfil";
+}
+
+
+logoutButton.addEventListener('click', () => {
+    window.location.href = 'DOM5.html';
+});
+
+const favoriteButton = document.querySelector(".aside_boxOne");
+
+
 
 
 const doctores = await obtenerDoctores();
+console.log(doctores);
 
 const doctor_box = document.getElementById("main");
 
@@ -42,7 +59,6 @@ for (const doctor of doctores) {
         } else {
             doctor.style.display = "none";
         }
-
 
 
     }

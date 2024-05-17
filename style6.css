@@ -401,9 +401,13 @@ a{
 
 .aside_favorite_text{
     opacity: 60%;
+    cursor: pointer;
  
 }
+.aside_favorite{
+    cursor: pointer;
 
+}
 .main_doctor_description_aside{
     display: flex;
     flex-direction: column;

@@ -1,13 +1,12 @@
-import { obtenerUsuarios } from './utils.js';
+import { obtenerUsuarioActivo, obtenerUsuarios } from './utils.js';
 
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const frmLogin = document.getElementById('frmLogin');
 const usuariosKey = 'user';
+const favoritosKey = 'favoritos';
 const usuarioActivoKey = 'user-active';
 const usuarios = obtenerUsuarios();
-
-
 
 
 
@@ -48,11 +47,28 @@ function loginUser(event){
         window.location.href = 'mainPage.html'; 
         const user = validateUser.find(user => user.email === email.value && user.password === password.value);
         localStorage.setItem(usuarioActivoKey, user.id);
+        localStorage.setItem(favoritosKey, JSON.stringify(user.favoritos));
     }
+
+    
 
     
 };
 
-    const logout = () => {
-    localStorage.removeItem(usuarioActivoKey);
+const render = async () => {
+    const usuarioActivo = obtenerUsuarioActivo();
+    console.log(usuarioActivo);
+
+    if (usuarioActivo) {
+        window.location.href = "mainPage.html";
+        return;
+    }
+};
+
+document.addEventListener('DOMContentLoaded', render);
+
+
+export const logout = () => {
+   
+
 };

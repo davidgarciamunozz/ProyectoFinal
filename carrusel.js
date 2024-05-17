@@ -1,3 +1,28 @@
+import { obtenerUsuarioActivo } from './utils.js';
+
+
+
+
+const render = async () => {
+  const boton = document.querySelector('.lista__boton');
+
+  const usuarioActivo = obtenerUsuarioActivo();
+  console.log(usuarioActivo);
+
+  if (usuarioActivo) {
+    boton.innerText = 'Cerrar Sesión';
+    boton.classList.add('lista__boton--cerrar');
+    boton.addEventListener('click', (event) => {
+      localStorage.removeItem('user-active');
+      window.location.href = 'DOM4.html';
+    });
+    return;
+  }
+ 
+}
+
+document.addEventListener('DOMContentLoaded', render);
+
 const btnLeft = document.querySelector('.btn-left');
 const btnRight = document.querySelector('.btn-right');
 const slider = document.querySelector('#slider');
@@ -36,4 +61,5 @@ function moveLeft() {
     slider.style.transition = 'transform 0.5s';
   }
  
-}
+};
+
