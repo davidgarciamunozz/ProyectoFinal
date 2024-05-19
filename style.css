@@ -334,19 +334,20 @@ body {
     padding-top: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
+    min-width: 617px;
 }
-#null{
-    /* border: solid; */
+#izq h2{
     padding-left: 4rem;
 }
-#carousel{
-    position: absolute;
-    /* border: solid; */
-    height: 100%;
-    width: 60%;
-    margin-left: 3.5rem;
-    overflow: hidden;
+#paloma{
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    height: 16rem;
+}
+#global-carousel{
+   padding-top: 1rem;
 
 }
 #carousel img{
@@ -484,3 +485,73 @@ footer p{
     right: 10px;
 }
 /* css carrusel final */
+
+
+@media (max-width: 1220px){
+    .lista{
+        display: none;
+    }
+    #iphone{
+        display: none;
+    }
+    #containerizq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    #banner{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+    }
+    #banner h2{
+        font-size: 5.5rem;
+        padding-left: 0;
+    }
+    #dispoimg{
+        margin-top: 1rem;
+    }
+    #der{
+        display: none;
+    }
+    #izq{
+        width: 100%;
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #izq h2{
+        text-align: center;
+        font-size: 3.5rem;
+        padding-left: 0;
+    }
+    #paloma{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .palomita{
+        width: 380px;
+    }
+    .slider-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #reseñaUno{
+        margin: 0;
+    }
+    #reseñaDos{
+        margin: 0;
+    }
+    .btn-right{
+        right: 0;
+    }
+}

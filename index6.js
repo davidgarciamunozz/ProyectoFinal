@@ -24,7 +24,7 @@ logoutButton.addEventListener('click', () => {
 
 const favoriteButton = document.querySelector(".aside_boxOne");
 
-
+ 
 
 
 const doctores = await obtenerDoctores();

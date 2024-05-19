@@ -138,6 +138,7 @@ input {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
+
 .boton:active{
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     transform: translateY(0);
@@ -235,4 +236,61 @@ footer p{
 
 a{
     text-decoration: none;
+}
+
+    form {
+        width: 800px;
+        height: 200px;
+        /* border: solid; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    input {
+        height: 55px;
+        width: 370px;
+        border-radius: 5px;
+        padding-left: 10px;
+        border: 1.5px solid rgb(193, 193, 193);
+        margin-top: 20px;
+    }
+    
+    .boton {
+        background-color: #1eb4f5;
+        height: 45px;
+        border: none;
+        color: white;
+        font-size: 0.938rem;
+    }
+    
+    .boton:hover,
+    .boton:focus {
+        background-color: #1eb4f5;
+        color: #ffffff;
+        border:#1eb4f5 2px solid ;
+        transition: 0.4s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+    
+    
+    .boton:active{
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        transform: translateY(0);
+    }
+    .boton:hover{
+        transform: translateY(-2px);
+    
+    }
+    #container {
+        /* border: solid; */
+        display: flex
+    }    
+    
+@media (max-width: 1240px){
+    .lista{
+        display: none;
+    }
+  
 }
