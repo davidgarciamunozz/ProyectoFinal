@@ -80,11 +80,11 @@ body{
     /* font-weight: bold; */
 }
 
-#logout{
+#logout-string{
     font-size: 15px;
     font-weight: bold;
     color: #02aeef;
-    cursor: pointer;
+    cursor: pointer ;
 }
 #userinfo_container{
     background-color: white;

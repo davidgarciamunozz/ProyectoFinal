@@ -1,7 +1,7 @@
 import icons from './icons.json' assert {type: 'json'};
 
 export const obtenerDoctores = async () => {
-    const response = await fetch('./data.json');
+    const response = await fetch('https://raw.githubusercontent.com/davidgarciamunozz/ProyectoFinal/main/data.json');
     const data = await response.json();
     return data;
 };
@@ -139,6 +139,12 @@ export class Doctor {
 
         aside_boxOne.appendChild(aside_favorite_icon);
         aside_boxOne.appendChild(aside_favorite_text);
+        // aside_boxOne.addEventListener("click", () => {
+        //   window.location.href = `DOM9.html`;
+        // });
+        aside_boxOne.addEventListener("click", () => {
+        
+        });
         doctor_box_description_aside.appendChild(aside_boxOne);
         doctor_box_description_aside.appendChild(aside_decription);
         aside_decription.appendChild(aside_reviews_text);
@@ -183,15 +189,20 @@ export const obtenerUsuarios = () => {
     export const obtenerUsuarioActivo = () => {
     const usuarioActivo = localStorage.getItem('user-active');
     const usuarios = obtenerUsuarios();
-    console.log(usuarioActivo); 
-    console.log(usuarios); 
+    // console.log(usuarioActivo); 
+    // console.log(usuarios); 
 
     for (const usuario of usuarios){
         if (usuario.id.toString() === usuarioActivo){
-            console.log(usuario);
+            // console.log(usuario);
             return usuario;
         }
     }
     return null;
+};
+export const logout = () => {
+    localStorage.removeItem(usuarioActivoKey);
+
+    
 };
 

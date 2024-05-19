@@ -1,4 +1,5 @@
 {
    "favIcon":"icons/FavIcon.svg",
+   "favIconActive":"icons/FavIcon.svg",
    "reviewStar":"icons/ReviewStars.svg"
 }

@@ -17,7 +17,7 @@ frmRegister.addEventListener("submit", registerUser);
 
 // Registrar Usuario
 
-function registerUser(event){
+export function registerUser(event){
     // Prevenir eventos precargados
     event.preventDefault();
     // Agregar un id
@@ -56,6 +56,7 @@ function registerUser(event){
         userRegistered.push(newUser);
         localStorage.setItem('user', JSON.stringify(userRegistered));
         alert('Usuario registrado correctamente');
+        window.location.href = 'DOM4.html';
    
     // Limpiar campos
         userName.value = '';

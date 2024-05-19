@@ -283,3 +283,8 @@ footer p{
 a{
     text-decoration:none;
 }
+@media (max-width: 1220px){
+    .lista{
+        display: none;
+    }
+}

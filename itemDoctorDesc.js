@@ -9,7 +9,7 @@ const render = async () => {
 
     const refer = document.getElementById("profile_img");
     refer.src = doctor.image;
-    refer.alt = doctor.firstName;
+    refer.alt = doctor.firstname;
 
     const nombre_box = document.getElementById("nombreCompleto");
     nombre_box.textContent = `${doctor.firstname} ${doctor.lastname}`;
