@@ -1,13 +1,20 @@
-import { obtenerDoctores, Doctor, obtenerUsuarioActivo } from "./utils.js";
-
-
+import { obtenerDoctores, Doctor, obtenerUsuarioActivo, obtenerDoctorPorId, obtenerUsuarios } from "./utils.js";
+ 
 const render = async () => {
 
   const logoutButton = document.querySelector(".lista__boton");
+  
+  let usuarios = await obtenerUsuarios();
+  console.log(usuarios);
 
 
-  const usuarioActivo = obtenerUsuarioActivo(); 
+
+  const usuarioActivo = obtenerUsuarioActivo();
   console.log(usuarioActivo);
+
+
+
+
   if (!usuarioActivo) {
       window.location.href = "DOM4.html";
       return;
@@ -22,20 +29,20 @@ logoutButton.addEventListener('click', () => {
     window.location.href = 'DOM5.html';
 });
 
-const favoriteButton = document.querySelector(".aside_boxOne");
-
- 
-
-
 const doctores = await obtenerDoctores();
 console.log(doctores);
+
+
+
+const idDoctores = doctores.map(doctor => doctor.id);
+console.log(idDoctores);
 
 const doctor_box = document.getElementById("main");
 
 for (const doctor of doctores) {
-    const doctorRenders = new Doctor(doctor.firstname, doctor.lastname, doctor.genre, doctor.role, doctor.available, doctor.image, doctor.id, doctor.dateOfBirth, doctor.maritalStatus, doctor.emailAddress, doctor.location, doctor.phoneNumber);
-    const doctorRender = doctorRenders.render();
-    doctor_box.appendChild(doctorRender);
+  const doctorRenders = new Doctor(doctor.firstname, doctor.lastname, doctor.genre, doctor.role, doctor.available, doctor.image, doctor.id, doctor.dateOfBirth, doctor.maritalStatus, doctor.emailAddress, doctor.location, doctor.phoneNumber);
+  const doctorRender = doctorRenders.render();
+  doctor_box.appendChild(doctorRender);
  };
 
  const searchInput = document.getElementById("larger");
@@ -84,9 +91,7 @@ for (const doctor of doctores) {
 
 });
 
-}
-
-
+};
 
 
 document.addEventListener('DOMContentLoaded', render);

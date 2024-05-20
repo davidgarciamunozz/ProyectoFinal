@@ -6,6 +6,7 @@ const render = async () => {
     const id = params.get("id");
 
     const doctor = await obtenerDoctorPorId(parseInt(id));
+    console.log(doctor);
 
     const refer = document.getElementById("profile_img");
     refer.src = doctor.image;
