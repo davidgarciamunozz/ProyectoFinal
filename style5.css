@@ -194,3 +194,6 @@ footer{
 a{
     text-decoration: none;
 }
+#logout-bottom{
+    cursor: pointer;
+}

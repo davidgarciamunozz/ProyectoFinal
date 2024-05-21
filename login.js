@@ -19,9 +19,10 @@ function loginUser(event){
     // Obtener los datos del usuario
     const getLocal = localStorage.getItem('user');
     const validateUser = JSON.parse(getLocal);
+    console.log(validateUser);
 
 
-    //validate Local Storage is not empty
+    //validar que el local storage no este vacio
 
     if (!validateUser){
         alert('No hay usuarios registrados');
@@ -47,7 +48,7 @@ function loginUser(event){
         window.location.href = 'mainPage.html'; 
         const user = validateUser.find(user => user.email === email.value && user.password === password.value);
         localStorage.setItem(usuarioActivoKey, user.id);
-        localStorage.setItem(favoritosKey, JSON.stringify(user.favoritos));
+
     }
 
     
@@ -56,7 +57,7 @@ function loginUser(event){
 };
 
 const render = async () => {
-    const usuarioActivo = obtenerUsuarioActivo();
+    const usuarioActivo = localStorage.getItem('user-active');
     console.log(usuarioActivo);
 
     if (usuarioActivo) {

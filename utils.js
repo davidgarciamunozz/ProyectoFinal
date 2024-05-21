@@ -6,6 +6,10 @@ export const obtenerDoctores = async () => {
     return data;
 };
 
+
+
+
+
 export const obtenerDoctorPorId = async (id) => {
     const doctores = await obtenerDoctores();
 
@@ -15,9 +19,8 @@ export const obtenerDoctorPorId = async (id) => {
         }
     }
     throw new Error('Doctor no encontrado');
-
+    
 }
-
 
 export class Doctor {
     constructor(nombre, apellido, genero, roll, disponibilidad, imagen, id,) {
@@ -34,6 +37,7 @@ export class Doctor {
     
 
     render = () => {
+
         const doctor_box = document.createElement("div");
          doctor_box.classList.add("main_doctor");
 
@@ -142,9 +146,74 @@ export class Doctor {
         // aside_boxOne.addEventListener("click", () => {
         //   window.location.href = `DOM9.html`;
         // });
-        aside_boxOne.addEventListener("click", () => {
+        // aside_boxOne.addEventListener("click", () => {
+        //     const favoritos = localStorage.getItem('favoritos');
+        //     const favoritosArray = JSON.parse(favoritos) || [];
         
+        //     const doctor = {
+        //         id: this.id,
+        //         nombre: this.nombre,
+        //         apellido: this.apellido,
+        //         genero: this.genero,
+        //         roll: this.roll,
+        //         disponibilidad: this.disponibilidad,
+        //         imagen: this.imagen
+        //     };
+        
+        //     // Encontrar el índice del doctor en el arreglo de favoritos
+        //     const index = favoritosArray.findIndex(fav => fav.id === doctor.id);
+        
+        //     if (index !== -1) {
+        //         // Si el doctor ya está en favoritos, eliminarlo
+        //         favoritosArray.splice(index, 1);
+        //     } else {
+        //         // Si el doctor no está en favoritos, agregarlo
+        //         favoritosArray.push(doctor);
+        //     }
+        
+        //     // Guardar el arreglo actualizado en localStorage
+        //     localStorage.setItem('favoritos', JSON.stringify(favoritosArray));
+        // });
+        aside_boxOne.addEventListener("click", async () => {
+            const user = obtenerUsuarioActivo();
+            if (!user) {
+                console.error('No hay usuario activo');
+                return;
+            }
+            
+            // Obtener la lista de todos los usuarios
+            const usuarios = obtenerUsuarios();
+        
+            // Encontrar al usuario activo en la lista de usuarios
+            const usuarioIndex = usuarios.findIndex(u => u.id === user.id);
+            if (usuarioIndex === -1) {
+                console.error('Usuario activo no encontrado en la lista de usuarios');
+                return;
+            }
+        
+            // Obtener el ID del doctor actual
+            const doctorId = this.id;
+        
+            // Toggle para añadir o quitar de favoritos
+            const favoritos = user.favoritos || [];
+            const doctorIndex = favoritos.indexOf(doctorId);
+        
+            if (doctorIndex !== -1) {
+                // Si el doctor ya está en favoritos, eliminarlo
+                favoritos.splice(doctorIndex, 1);
+            } else {
+                // Si el doctor no está en favoritos, agregarlo
+                favoritos.push(doctorId);
+            }
+        
+            // Actualizar los favoritos del usuario activo
+            user.favoritos = favoritos;
+        
+            // Actualizar la lista de usuarios en localStorage
+            usuarios[usuarioIndex] = user;
+            localStorage.setItem('user', JSON.stringify(usuarios));
         });
+        
         doctor_box_description_aside.appendChild(aside_boxOne);
         doctor_box_description_aside.appendChild(aside_decription);
         aside_decription.appendChild(aside_reviews_text);
@@ -169,31 +238,45 @@ export class Doctor {
 
          return doctor_box;
 
-    }
-   
-
-
+    };
 
 
 };
 
-export const obtenerUsuarios = () => {
-    const usuarios = localStorage.getItem('user');
 
+    //export const for obtain the doctors that are in the favorites
+    export const obtenerDoctoresfavoritos = async (id) => {
+        const doctores = await obtenerDoctores();
+        const favoritos = localStorage.getItem('favoritos');
+        const favoritosArray = JSON.parse(favoritos) || [];
+    
+        return doctores.filter(doctor => favoritosArray.some(fav => fav.id === doctor.id));
+    }
+    
+    
+
+    
+    
+    
+    //export const for obtain the users that are registered
+    export const obtenerUsuarios = () => {
+    const usuarios = localStorage.getItem('user');
     if (!usuarios){
         return [];
     }
-
     return JSON.parse(usuarios);
 };
+
+
+//export const for obtain the active user
     export const obtenerUsuarioActivo = () => {
-    const usuarioActivo = localStorage.getItem('user-active');
+    const usuarioActivo = parseInt(localStorage.getItem('user-active'));
     const usuarios = obtenerUsuarios();
     // console.log(usuarioActivo); 
     // console.log(usuarios); 
 
     for (const usuario of usuarios){
-        if (usuario.id.toString() === usuarioActivo){
+        if (usuario.id === usuarioActivo){
             // console.log(usuario);
             return usuario;
         }
@@ -201,8 +284,6 @@ export const obtenerUsuarios = () => {
     return null;
 };
 export const logout = () => {
-    localStorage.removeItem(usuarioActivoKey);
-
-    
+    localStorage.removeItem(usuarioActivoKey);    
 };
 
