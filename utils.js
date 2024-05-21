@@ -174,23 +174,46 @@ export class Doctor {
         //     // Guardar el arreglo actualizado en localStorage
         //     localStorage.setItem('favoritos', JSON.stringify(favoritosArray));
         // });
-        aside_boxOne.addEventListener("click", () => {
-            const favoritos = JSON.parse(localStorage.getItem('favoritos'));
-            const doctor = this.id;
-            if (favoritos) {
-                if (favoritos.includes(doctor)) {
-                    favoritos.splice(favoritos.indexOf(doctor), 1);
-                    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-                } else {
-                    favoritos.push(doctor);
-                    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-                }
-            } else {
-                localStorage.setItem('favoritos', JSON.stringify(doctor));
+        aside_boxOne.addEventListener("click", async () => {
+            const user = obtenerUsuarioActivo();
+            if (!user) {
+                console.error('No hay usuario activo');
+                return;
             }
-
-
+            
+            // Obtener la lista de todos los usuarios
+            const usuarios = obtenerUsuarios();
+        
+            // Encontrar al usuario activo en la lista de usuarios
+            const usuarioIndex = usuarios.findIndex(u => u.id === user.id);
+            if (usuarioIndex === -1) {
+                console.error('Usuario activo no encontrado en la lista de usuarios');
+                return;
+            }
+        
+            // Obtener el ID del doctor actual
+            const doctorId = this.id;
+        
+            // Toggle para añadir o quitar de favoritos
+            const favoritos = user.favoritos || [];
+            const doctorIndex = favoritos.indexOf(doctorId);
+        
+            if (doctorIndex !== -1) {
+                // Si el doctor ya está en favoritos, eliminarlo
+                favoritos.splice(doctorIndex, 1);
+            } else {
+                // Si el doctor no está en favoritos, agregarlo
+                favoritos.push(doctorId);
+            }
+        
+            // Actualizar los favoritos del usuario activo
+            user.favoritos = favoritos;
+        
+            // Actualizar la lista de usuarios en localStorage
+            usuarios[usuarioIndex] = user;
+            localStorage.setItem('user', JSON.stringify(usuarios));
         });
+        
         doctor_box_description_aside.appendChild(aside_boxOne);
         doctor_box_description_aside.appendChild(aside_decription);
         aside_decription.appendChild(aside_reviews_text);

@@ -48,7 +48,7 @@ function loginUser(event){
         window.location.href = 'mainPage.html'; 
         const user = validateUser.find(user => user.email === email.value && user.password === password.value);
         localStorage.setItem(usuarioActivoKey, user.id);
-        localStorage.setItem(favoritosKey, JSON.stringify(user.favoritos));
+
     }
 
     
