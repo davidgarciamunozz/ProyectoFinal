@@ -12,7 +12,7 @@ const obtenerDoctoresFavoritos = async () => {
 }
 
 
-const render = async () => {
+export const renderFavorites = async () => {
 
  if (!localStorage.getItem('user-active')) {
  window.location.href = 'DOM4.html';
@@ -178,4 +178,8 @@ window.location.href = 'DOM4.html';
 
 };
 
-document.addEventListener('DOMContentLoaded', render);
+document.addEventListener('DOMContentLoaded', renderFavorites);
+
+export function actualizarPagina() {
+    renderFavorites();
+}
