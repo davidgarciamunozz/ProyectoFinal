@@ -67,9 +67,3 @@ const render = async () => {
 };
 
 document.addEventListener('DOMContentLoaded', render);
-
-
-export const logout = () => {
-   
-
-};

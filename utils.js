@@ -1,4 +1,3 @@
-import { renderFavorites, actualizarPagina } from './favorites-index9.js';
 import icons from './icons.json' assert {type: 'json'};
 
 export const obtenerDoctores = async () => {
