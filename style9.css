@@ -283,6 +283,7 @@ button{
     cursor: pointer;
 }
 .main_doctor{
+    display: flex;
     min-width: 700px;
     justify-content: space-between;
     padding: 0 2rem;
@@ -312,4 +313,11 @@ button{
 }
 .availability_no{
     color: rgb(211,12,12);
+}
+.main_doctor_description_aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: .5rem;
 }

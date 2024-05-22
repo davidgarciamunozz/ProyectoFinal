@@ -1,3 +1,4 @@
+import { renderFavorites, actualizarPagina } from './favorites-index9.js';
 import icons from './icons.json' assert {type: 'json'};
 
 export const obtenerDoctores = async () => {
@@ -212,6 +213,8 @@ export class Doctor {
             // Actualizar la lista de usuarios en localStorage
             usuarios[usuarioIndex] = user;
             localStorage.setItem('user', JSON.stringify(usuarios));
+            actualizarPagina();
+            
         });
         
         doctor_box_description_aside.appendChild(aside_boxOne);
