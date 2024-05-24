@@ -97,40 +97,45 @@ export class Doctor {
         aside_decription.appendChild(review_agroupation);
 
 
-        const svg_img = document.createElement("img");
-        svg_img.src = icons.reviewStar;
-        svg_img.classList.add("reviewStar");
+        const svg_img = document.createElement("i");
+        svg_img.classList.add("fa-regular");
+        svg_img.classList.add("fa-star");
+        svg_img.style.color = "#FFD438";
         review_agroupation.appendChild(svg_img);
 
 
-        const svg_img1 = document.createElement("img");
-        svg_img1.src = icons.reviewStar;
-        svg_img1.classList.add("reviewStar");
+        const svg_img1 = document.createElement("i");
+        svg_img1.classList.add("fa-regular");
+        svg_img1.classList.add("fa-star");
+        svg_img1.style.color = "#FFD438";
         review_agroupation.appendChild(svg_img1);
 
-        const svg_img2 = document.createElement("img");
-        svg_img2.src = icons.reviewStar;
-        svg_img2.classList.add("reviewStar");
+        const svg_img2 = document.createElement("i");
+        svg_img2.classList.add("fa-regular");
+        svg_img2.classList.add("fa-star");
+        svg_img2.style.color = "#FFD438";
         review_agroupation.appendChild(svg_img2);
 
-        const svg_img3 = document.createElement("img");
-        svg_img3.src = icons.reviewStar;
-        svg_img3.classList.add("reviewStar");
+        const svg_img3 = document.createElement("i");
+        svg_img3.classList.add("fa-regular");
+        svg_img3.classList.add("fa-star");
+        svg_img3.style.color = "#FFD438";
         review_agroupation.appendChild(svg_img3);
 
-        const svg_img4 = document.createElement("img");
-        svg_img4.src = icons.reviewStar;
-        svg_img4.classList.add("reviewStar");
+        const svg_img4 = document.createElement("i");
+        svg_img4.classList.add("fa-regular");
+        svg_img4.classList.add("fa-star");
+        svg_img4.style.color = "#FFD438";
         review_agroupation.appendChild(svg_img4);
 
 
         const aside_favorite_icon = document.createElement("div");
         aside_favorite_icon.classList.add("aside_favorite");
         
-        const svg_imgFavorite = document.createElement("img");
-        svg_imgFavorite.src = icons.favIcon;
-
-        svg_imgFavorite.classList.add("favorite");
+        const svg_imgFavorite = document.createElement("i");
+        svg_imgFavorite.classList.add("fa-regular");
+        svg_imgFavorite.classList.add("fa-heart");
+        svg_imgFavorite.style.color = "#f51707";
         aside_favorite_icon.appendChild(svg_imgFavorite);
 
         const aside_favorite_text = document.createElement("p");
@@ -213,7 +218,7 @@ export class Doctor {
             // Actualizar la lista de usuarios en localStorage
             usuarios[usuarioIndex] = user;
             localStorage.setItem('user', JSON.stringify(usuarios));
-            actualizarPagina();
+            
             
         });
         
