@@ -211,3 +211,7 @@ window.location.href = 'DOM4.html';
 };
 
 document.addEventListener('DOMContentLoaded', renderFavorites);
+
+const actualizarPagina = () => {
+    renderFavorites();
+}
