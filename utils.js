@@ -204,9 +204,13 @@ export class Doctor {
             if (doctorIndex !== -1) {
                 // Si el doctor ya está en favoritos, eliminarlo
                 favoritos.splice(doctorIndex, 1);
+                svg_imgFavorite.classList.add('fa-regular');
+                svg_imgFavorite.classList.remove('fa-solid');
             } else {
                 // Si el doctor no está en favoritos, agregarlo
                 favoritos.push(doctorId);
+                svg_imgFavorite.classList.remove('fa-regular');
+                svg_imgFavorite.classList.add('fa-solid');
             }
         
             // Actualizar los favoritos del usuario activo
