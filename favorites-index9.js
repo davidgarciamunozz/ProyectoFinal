@@ -1,4 +1,4 @@
-import { obtenerDoctores, obtenerUsuarioActivo } from "./utils.js";
+import { obtenerDoctores, obtenerDoctoresfavoritos, obtenerUsuarioActivo, obtenerUsuarios } from "./utils.js";
 
 // obtener doctores de favoritos con el id almacenado en los favoritos del usuario
 const obtenerDoctoresFavoritos = async () => {
@@ -18,8 +18,6 @@ export const renderFavorites = async () => {
  window.location.href = 'DOM4.html';
  }
 
-
-
 const logoutButton_top = document.getElementById("logout");
 const logoutButton_bottom = document.getElementById("logout-bottom");
 const usuarioActivoKey = 'user-active';
@@ -34,7 +32,7 @@ window.location.href = 'DOM4.html';
 });
 
 
-
+    const favoritos = obtenerUsuarioActivo().favoritos;
 
     const usuarioActivo = obtenerUsuarioActivo();
     if (!usuarioActivo) {
@@ -46,6 +44,14 @@ window.location.href = 'DOM4.html';
 
     const doctorList = document.getElementById("userFavoritesContainer");
     doctorList.innerHTML = '';
+    if (favoritos.length === 0) {
+        const noFavorites = document.createElement('p');
+        noFavorites.classList.add('noFavorites');
+        noFavorites.textContent = 'Aun no tienes doctores favoritos';
+        doctorList.appendChild(noFavorites);
+    }
+
+
 
     const doctoresFavoritos = await obtenerDoctoresFavoritos();
     console.log(doctoresFavoritos);
@@ -104,36 +110,43 @@ window.location.href = 'DOM4.html';
         const review_agroupation = document.createElement('div');
         review_agroupation.classList.add('review_agroupation');
 
-        const svg_img = document.createElement('img');
-        svg_img.src = 'assets/estrella.svg';
-        svg_img.classList.add('reviewStar');
+        const svg_img = document.createElement('i');
+        svg_img.classList.add('fa-regular');
+        svg_img.classList.add('fa-star');
+        svg_img.style.color = '#FFD438';
         review_agroupation.appendChild(svg_img);
 
-        const svg_img1 = document.createElement('img');
-        svg_img1.src = 'assets/estrella.svg';
-        svg_img1.classList.add('reviewStar');
+        const svg_img1 = document.createElement('i');
+        svg_img1.classList.add('fa-regular');
+        svg_img1.classList.add('fa-star');
+        svg_img1.style.color = '#FFD438';
         review_agroupation.appendChild(svg_img1);
 
-        const svg_img2 = document.createElement('img');
-        svg_img2.src = 'assets/estrella.svg';
-        svg_img2.classList.add('reviewStar');
+        const svg_img2 = document.createElement('i');
+        svg_img2.classList.add('fa-regular');
+        svg_img2.classList.add('fa-star');
+        svg_img2.style.color = '#FFD438';
         review_agroupation.appendChild(svg_img2);
 
-        const svg_img3 = document.createElement('img');
-        svg_img3.src = 'assets/estrella.svg';
-        svg_img3.classList.add('reviewStar');
+        const svg_img3 = document.createElement('i');
+        svg_img3.classList.add('fa-regular');
+        svg_img3.classList.add('fa-star');
+        svg_img3.style.color = '#FFD438';
         review_agroupation.appendChild(svg_img3);
 
-        const svg_img4 = document.createElement('img');
-        svg_img4.src = 'assets/estrella.svg';
-        svg_img4.classList.add('reviewStar');
+        const svg_img4 = document.createElement('i');
+        svg_img4.classList.add('fa-regular');
+        svg_img4.classList.add('fa-star');
+        svg_img4.style.color = '#FFD438';
         review_agroupation.appendChild(svg_img4);
         
         const aside_favorite_icon = document.createElement('div');
         aside_favorite_icon.classList.add('aside_favorite');
 
-        const svg_imgFavorite = document.createElement('img');
-        svg_imgFavorite.src = 'assets/heart.svg';
+        const svg_imgFavorite = document.createElement('i');
+        svg_imgFavorite.classList.add('fa-regular');
+        svg_imgFavorite.classList.add('fa-heart');
+        svg_imgFavorite.style.color = '#F51707';
 
         svg_imgFavorite.classList.add('favorite');
         aside_favorite_icon.appendChild(svg_imgFavorite);
@@ -151,10 +164,29 @@ window.location.href = 'DOM4.html';
         doctor_box_description_aside.appendChild(aside_boxOne);
         doctor_box_description_aside.appendChild(aside_description);
         doctor_box_description_aside.appendChild(agendar);
+        agendar.addEventListener('click', () => {
+            window.location.href = `DOM8.html?id=${doctor.id}`;
+        });
+        aside_description.appendChild(review_agroupation);
         aside_description.appendChild(aside_reviews_text);
         aside_description.appendChild(aside_reviews_icons);
         aside_boxOne.appendChild(aside_favorite_icon);
-        aside_boxOne.appendChild(aside_favorite_text);    
+        aside_boxOne.appendChild(aside_favorite_text);   
+        aside_boxOne.addEventListener('click', () => {
+            const user = obtenerUsuarioActivo();
+            const usuarios = obtenerUsuarios();
+            const usuarioIndex = usuarios.findIndex((usuario) => usuario.id === user.id);
+            const doctorId = doctor.id;
+            const favoritos = user.favoritos;
+            const doctorIndex = favoritos.findIndex((doctor) => doctor === doctorId);
+            favoritos.splice(doctorIndex, 1);
+
+            user.favoritos = favoritos;
+            usuarios[usuarioIndex] = user;
+            localStorage.setItem('user', JSON.stringify(usuarios));
+            actualizarPagina();
+
+        });
         doctorList.appendChild(doctorItem); 
         doctorItem.appendChild(doctor_box);
         doctor_box.appendChild(doctor_agrupation_img_description);
@@ -165,7 +197,7 @@ window.location.href = 'DOM4.html';
         doctor_box_description.appendChild(availability);
         doctor_box.appendChild(doctor_agrupation_img_description);
         doctor_box.appendChild(doctor_box_description_aside);
-        aside_description.appendChild(review_agroupation);
+       
          
         return doctorItem;
     

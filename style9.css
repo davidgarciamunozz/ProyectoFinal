@@ -284,11 +284,11 @@ button{
 }
 .main_doctor{
     display: flex;
-    min-width: 700px;
+    min-width: 500px;
     justify-content: space-between;
     padding: 0 2rem;
-    border: solid 1px;
-
+    width: 900px;
+    border-bottom: 1px solid rgb(206, 194, 194);
 }
 .doctor_img{
     height: 120px;
@@ -314,10 +314,89 @@ button{
 .availability_no{
     color: rgb(211,12,12);
 }
+.aside_description{
+    display: flex;
+    order: 1;
+    gap: .3rem;
+    align-items: center;
+ 
+}
+.aside_boxOne{
+    display: flex;
+    order: 2;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+}
+.agendar{
+    order: 3;
+    cursor: pointer;
+    padding: 0 .8rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 10px 10px 0;
+    
+}
+.agendar:hover,
+.agendar:focus{
+    background-color: rgb(0, 187, 255);
+    color: white;
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+.agendar:active{
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    transform: translateY(0);
+}
+.agendar:hover{
+    transform: translateY(-2px);
+
+}
+
+.aside_reviews_icons{
+    order: -1;
+}
+
+.aside_reviews_text{
+    opacity: 60%;
+  
+}
+
+
+.aside_favorite_text{
+    opacity: 60%;
+    cursor: pointer;
+ 
+}
+.aside_favorite{
+    cursor: pointer;
+
+}
 .main_doctor_description_aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: .5rem;
+}
+.reviewStar{
+    height: 20px;
+}
+.favorite{
+    height: 20px;
+}
+.filtro{
+    display: none;
+}
+#userFavoritesContainer{
+    overflow: auto;
+    height: 450px;
+    width: 920px;
+    min-width: 920px;
+    background-color: white;
+    border-radius: 15px;
+}
+.noFavorites{
+    opacity: 40%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    user-select: none;
 }
