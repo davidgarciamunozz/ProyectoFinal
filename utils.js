@@ -219,7 +219,8 @@ export class Doctor {
             // Actualizar la lista de usuarios en localStorage
             usuarios[usuarioIndex] = user;
             localStorage.setItem('user', JSON.stringify(usuarios));
-            
+           
+         
             
         });
         
@@ -238,6 +239,21 @@ export class Doctor {
         doctor_box_description.appendChild(title);
         doctor_box_description.appendChild(doctor_info);
         doctor_box_description.appendChild(availability);
+
+
+           //Actualizar el icono de favoritos
+           const user = obtenerUsuarioActivo();
+           const favoritos = user.favoritos || [];
+           const doctorId = this.id;
+
+           if (favoritos.includes(doctorId)) {
+            svg_imgFavorite.classList.remove('fa-regular');
+            svg_imgFavorite.classList.add('fa-solid');
+        } else {
+            svg_imgFavorite.classList.add('fa-regular');
+            svg_imgFavorite.classList.remove('fa-solid');
+        }
+        
 
 
 

@@ -50,9 +50,6 @@ function loginUser(event){
         localStorage.setItem(usuarioActivoKey, user.id);
 
     }
-
-    
-
     
 };
 
