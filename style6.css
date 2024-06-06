@@ -512,6 +512,10 @@ a{
     .divisores_main {
         width: 100%; 
     }
+
+    .lista__boton {
+        width: 5.5rem;
+    }
 }
 
 

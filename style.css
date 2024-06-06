@@ -555,6 +555,12 @@ footer p{
         right: 0;
     }
 } */
+@media (max-width: 1240px){
+     .lista{
+        display: none;
+     }
+}
+
 @media (max-width: 800px) {
   
     
@@ -577,7 +583,7 @@ footer p{
         margin-left: 0;
     }   
     .lista__boton{
-        width: 5rem;
+        width: 5.5rem;
     }
    
 
@@ -659,5 +665,11 @@ footer p{
     #buscador{
         height: 2.1rem;
     }
-    
+    #containerizq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
 }
