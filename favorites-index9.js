@@ -212,6 +212,6 @@ window.location.href = 'DOM4.html';
 
 document.addEventListener('DOMContentLoaded', renderFavorites);
 
-export function actualizarPagina() {
+const actualizarPagina = () => {
     renderFavorites();
 }
