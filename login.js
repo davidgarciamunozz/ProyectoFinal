@@ -50,9 +50,6 @@ function loginUser(event){
         localStorage.setItem(usuarioActivoKey, user.id);
 
     }
-
-    
-
     
 };
 
@@ -67,9 +64,3 @@ const render = async () => {
 };
 
 document.addEventListener('DOMContentLoaded', render);
-
-
-export const logout = () => {
-   
-
-};
